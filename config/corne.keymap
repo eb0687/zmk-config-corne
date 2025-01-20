@@ -206,7 +206,7 @@
         };
 
         NAV {
-            display-name = "nav";
+            display-name = "Navigation";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -215,10 +215,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans      &kp N1  &kp N2    &kp N3        &kp N4           &kp N5           &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                              &kp LGUI      &trans           &kp SPACE        &kp RET  &trans  &trans
+&none       &none  &none  &none     &none        &none        &none      &none                           &none                    &none                   &none                 &none
+&caps_word  &none  &none  &none     &browsertab  &none        &none      &mt2 LC(LEFT_ARROW) LEFT_ARROW  &mt2 LC(END) DOWN_ARROW  &mt2 LC(HOME) UP_ARROW  &mt2 LC(RIGHT) RIGHT  &none
+&none       &none  &none  &none     &none        &none        &none      &kp HOME                        &kp PAGE_DOWN            &kp PG_UP               &kp END               &none
+                          &kp LGUI  &trans       &kp ENTER    &kp SPACE  &trans                          &trans
             >;
         };
 
@@ -249,7 +249,7 @@
             >;
         };
 
-        Numbers {
+        NUM {
             display-name = "Numbers";
             bindings = <
 &none  &none                      &mt2 AMPERSAND N7              &mt2 ASTERISK N8       &mt2 LEFT_PARENTHESIS N9  &mt2 UNDERSCORE MINUS    &none   &none   &none   &none   &none        &trans
@@ -259,7 +259,7 @@
             >;
         };
 
-        Function {
+        FUN {
             bindings = <
 &none  &kp F12  &kp F7          &kp F8  &kp F9  &none    &none  &none  &none  &none  &mt2 LS(PRINTSCREEN) PRINTSCREEN  &none
 &none  &kp F11  &mt2 LA(F4) F4  &kp F5  &kp F6  &none    &none  &none  &none  &none  &none                             &none
