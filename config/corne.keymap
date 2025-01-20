@@ -181,6 +181,11 @@
             bindings = <&paragreat>;
             key-positions = <20 21>;
         };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 21>;
+        };
     };
 
     //
