@@ -187,7 +187,7 @@
 &kp TAB       &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
 &kp CAPSLOCK  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LCTRL     &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LGUI  &mo 1  &kp ENTER    &kp SPACE  &lt 2 TAB  &kp BACKSPACE
+                            &kp LGUI  &mo 1  &kp ENTER    &kp SPACE  &lt 4 TAB  &kp BACKSPACE
             >;
         };
 
@@ -235,13 +235,13 @@
             >;
         };
 
-        EXTRA1 {
-            display-name = "extra";
+        Numbers {
+            display-name = "numbers";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &none                     &mt AMPERSAND N7              &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS    &none   &none   &none   &none   &none        &trans
+&none  &mt RIGHT_PARENTHESIS N0  &mt DOLLAR NUMBER_4           &mt PERCENT NUMBER_6  &mt CARET NUMBER_6       &mt PLUS EQUAL          &none   &trans  &trans  &trans  &trans       &none
+&none  &none                     &mt RS(EXCLAMATION) NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3        &none                   &none   &none   &none   &trans  &bootloader  &none
+                                                               &trans                &trans                   &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -260,6 +260,11 @@
 
         l3 {
             if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        System {
+            if-layers = <1 4>;
             then-layer = <3>;
         };
     };
