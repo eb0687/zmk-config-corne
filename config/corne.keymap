@@ -54,6 +54,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt2: mod_tap_custom_2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT2";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            hold-trigger-on-release;
+        };
     };
 
     macros {
@@ -192,7 +206,7 @@
         };
 
         NAV {
-            display-name = "NavNum";
+            display-name = "nav";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -238,10 +252,10 @@
         Numbers {
             display-name = "numbers";
             bindings = <
-&none  &none                     &mt AMPERSAND N7              &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS    &none   &none   &none   &none   &none        &trans
-&none  &mt RIGHT_PARENTHESIS N0  &mt DOLLAR NUMBER_4           &mt PERCENT NUMBER_6  &mt CARET NUMBER_6       &mt PLUS EQUAL          &none   &trans  &trans  &trans  &trans       &none
-&none  &none                     &mt RS(EXCLAMATION) NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3        &none                   &none   &none   &none   &trans  &bootloader  &none
-                                                               &trans                &trans                   &trans                  &trans  &trans  &trans
+&none  &none                      &mt2 AMPERSAND N7              &mt2 ASTERISK N8       &mt2 LEFT_PARENTHESIS N9  &mt2 UNDERSCORE MINUS    &none   &none   &none   &none   &none        &trans
+&none  &mt2 RIGHT_PARENTHESIS N0  &mt2 DOLLAR NUMBER_4           &mt2 PERCENT NUMBER_6  &mt2 CARET NUMBER_6       &mt2 PLUS EQUAL          &none   &trans  &trans  &trans  &trans       &none
+&none  &none                      &mt2 RS(EXCLAMATION) NUMBER_1  &mt2 AT_SIGN NUMBER_2  &mt2 HASH NUMBER_3        &none                    &none   &none   &none   &trans  &bootloader  &none
+                                                                 &trans                 &trans                    &trans                   &trans  &trans  &trans
             >;
         };
 
@@ -258,7 +272,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        l4 {
+        l3 {
             if-layers = <1 4>;
             then-layer = <3>;
         };
