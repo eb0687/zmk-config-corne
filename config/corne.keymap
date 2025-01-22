@@ -92,11 +92,6 @@
             key-positions = <13 29>;
         };
 
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
-        };
-
         perc {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
@@ -164,22 +159,22 @@
 
         leftbrack {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
+            key-positions = <7 8>;
         };
 
         rightbrack {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <33 32>;
+            key-positions = <8 9>;
         };
 
         para-less {
             bindings = <&paraless>;
-            key-positions = <20 19>;
+            key-positions = <31 32>;
         };
 
         para-great {
             bindings = <&paragreat>;
-            key-positions = <20 21>;
+            key-positions = <33 32>;
         };
 
         combo_enter {
