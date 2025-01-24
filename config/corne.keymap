@@ -107,7 +107,7 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
+            key-positions = <16 15>;
         };
 
         perc {
@@ -280,10 +280,10 @@
         NUM {
             display-name = "Numbers";
             bindings = <
-&none  &none                      &mt2 AMPERSAND N7              &mt2 ASTERISK N8       &mt2 LEFT_PARENTHESIS N9  &mt2 UNDERSCORE MINUS    &none   &none   &none   &none   &none        &trans
-&none  &mt2 RIGHT_PARENTHESIS N0  &mt2 DOLLAR NUMBER_4           &mt2 PERCENT N5        &mt2 CARET NUMBER_6       &mt2 PLUS EQUAL          &none   &trans  &trans  &trans  &trans       &none
-&none  &none                      &mt2 RS(EXCLAMATION) NUMBER_1  &mt2 AT_SIGN NUMBER_2  &mt2 HASH NUMBER_3        &none                    &none   &none   &none   &trans  &bootloader  &none
-                                                                 &trans                 &trans                    &trans                   &trans  &trans  &trans
+&none       &none                      &mt2 AMPERSAND N7              &mt2 ASTERISK N8       &mt2 LEFT_PARENTHESIS N9  &mt2 UNDERSCORE MINUS    &none   &none   &none   &none   &none        &trans
+&caps_word  &mt2 RIGHT_PARENTHESIS N0  &mt2 DOLLAR NUMBER_4           &mt2 PERCENT N5        &mt2 CARET NUMBER_6       &mt2 PLUS EQUAL          &none   &trans  &trans  &trans  &trans       &none
+&none       &none                      &mt2 RS(EXCLAMATION) NUMBER_1  &mt2 AT_SIGN NUMBER_2  &mt2 HASH NUMBER_3        &none                    &none   &none   &none   &trans  &bootloader  &none
+                                                                      &trans                 &trans                    &trans                   &trans  &trans  &trans
             >;
         };
 
