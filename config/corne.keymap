@@ -8,6 +8,9 @@
 #define ADJ 3
 #define EXTRA 4
 
+&bootloader {
+};
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -141,13 +144,13 @@
         };
 
         copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
+            bindings = <&kp LC(C)>;
+            key-positions = <27 26>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
+            bindings = <&kp LC(V)>;
+            key-positions = <27 28>;
         };
 
         star {
@@ -243,10 +246,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none       &none  &none  &none         &none         &none        &none                     &none                    &none                   &none                             &none  &none
-&caps_word  &none  &none  &browsertabB  &browsertabF  &none        &mt2 LC(LEFT_ARROW) LEFT  &mt2 LC(END) DOWN_ARROW  &mt2 LC(HOME) UP_ARROW  &mt2 LC(RIGHT_ARROW) RIGHT_ARROW  &none  &none
-&none       &none  &none  &none         &none         &none        &kp HOME                  &kp PAGE_DOWN            &kp PAGE_UP             &kp END                           &none  &none
-                          &kp LGUI      &trans        &kp ENTER    &kp SPACE                 &trans                   &trans
+&bootloader  &none  &none  &none         &none         &none        &none                     &none                    &none                   &none                             &none  &none
+&caps_word   &none  &none  &browsertabB  &browsertabF  &none        &mt2 LC(LEFT_ARROW) LEFT  &mt2 LC(END) DOWN_ARROW  &mt2 LC(HOME) UP_ARROW  &mt2 LC(RIGHT_ARROW) RIGHT_ARROW  &none  &none
+&none        &none  &none  &none         &none         &none        &kp HOME                  &kp PAGE_DOWN            &kp PAGE_UP             &kp END                           &none  &none
+                           &kp LGUI      &trans        &kp ENTER    &kp SPACE                 &trans                   &trans
             >;
         };
 
@@ -260,7 +263,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none  &mt2 TILDE GRAVE  &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS           &none      &none      &none  &none   &none  &none  &none
+&none  &none  &mt2 TILDE GRAVE  &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS           &none      &none      &none  &none   &none  &none  &bootloader
 &none  &none  &none             &mt2 LEFT_BRACE LEFT_BRACKET  &mt2 RIGHT_BRACE RIGHT_BRACKET  &none      &none      &none  &none   &none  &none  &none
 &none  &none  &none             &mt2 PIPE NON_US_BACKSLASH    &mt2 QUESTION SLASH             &none      &none      &none  &none   &none  &none  &none
                                 &kp LGUI                      &none                           &kp RET    &kp SPACE  &none  &trans
