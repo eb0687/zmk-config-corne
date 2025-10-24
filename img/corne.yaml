@@ -347,26 +347,26 @@ layers:
   Mouse:
   - ''
   - ''
-  - '&mkp LCLK'
-  - '&mmv MOVE_UP'
-  - '&mkp RCLK'
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse$$
+  - $$mdi:mouse-right-click-outline$$
   - ''
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_RIGHT'
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-right$$
   - ''
   - ''
   - {type: held}
   - ''
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
+  - $$mdi:mouse$$
+  - $$mdi:mouse$$
+  - $$mdi:mouse$$
   - ''
   - ''
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp MCLK'
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-right-click-outline$$
+  - Middle Click
   - ''
   - ''
   - ''
