@@ -348,7 +348,7 @@ layers:
   - ''
   - ''
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse$$
+  - $$mdi:arrow-up$$
   - $$mdi:mouse-right-click-outline$$
   - ''
   - $$mdi:arrow-left$$
@@ -359,9 +359,9 @@ layers:
   - ''
   - {type: held}
   - ''
-  - $$mdi:mouse$$
-  - $$mdi:mouse$$
-  - $$mdi:mouse$$
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
   - ''
   - ''
   - $$mdi:mouse-left-click-outline$$
