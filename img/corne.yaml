@@ -1,0 +1,428 @@
+layout: {zmk_keyboard: corne}
+layers:
+  Base:
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:backspace$$
+  - Caps
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-command$$
+  - Nav
+  - $$mdi:keyboard-return$$
+  - $$mdi:keyboard-space$$
+  - {t: TAB, h: Symbols}
+  - $$mdi:backspace$$
+  Test:
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:backspace-reverse-outline$$
+  - {t: Esc, h: Mouse}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '''', h: '"'}
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', h: <}
+  - {t: ., h: '>'}
+  - {t: /, h: '?'}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: LMETA, h: Media}
+  - {t: '$$mdi:backspace$$', h: Nav}
+  - {t: '$$mdi:keyboard-return$$', h: Function}
+  - {t: '$$mdi:keyboard-space$$', h: Numbers}
+  - {t: TAB, h: Symbols}
+  - {t: '$$mdi:backspace$$', h: 'Ctl+$$mdi:backspace$$'}
+  Nav:
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Caps Word
+  - ''
+  - ''
+  - Ctrl+Tab
+  - Ctrl+Shift+Tab
+  - ''
+  - {t: '$$mdi:arrow-left-bold$$', h: 'Ctl+$$mdi:arrow-left-bold$$'}
+  - {t: '$$mdi:arrow-down-bold$$', h: Ctl+END}
+  - {t: '$$mdi:arrow-up-bold$$', h: 'Ctl+$$mdi:home-outline$$'}
+  - {t: '$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:arrow-right-bold$$'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$mdi:home-outline$$
+  - $$mdi:transfer-down$$
+  - $$mdi:transfer-up$$
+  - END
+  - ''
+  - ''
+  - $$mdi:apple-keyboard-command$$
+  - {type: held}
+  - $$mdi:keyboard-return$$
+  - $$mdi:keyboard-space$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Symbols:
+  - ''
+  - ''
+  - {t: '`', h: '~'}
+  - (
+  - )
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Boot
+  - ''
+  - ''
+  - ''
+  - {t: '[', h: '{'}
+  - {t: ']', h: '}'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: \, h: '|'}
+  - {t: /, h: '?'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$mdi:apple-keyboard-command$$
+  - ''
+  - RET
+  - $$mdi:keyboard-space$$
+  - {type: held}
+  - {t: ▽, type: trans}
+  System:
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Studio Unlock
+  - {t: ▽, type: trans}
+  - {t: Test, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT CLR
+  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Boot
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Numbers:
+  - ''
+  - ''
+  - {t: '7', h: '&'}
+  - {t: '8', h: '*'}
+  - {t: '9', h: (}
+  - {t: '-', h: _}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - Caps Word
+  - {t: '0', h: )}
+  - {t: '4', h: $}
+  - {t: '5', h: '%'}
+  - {t: '6', h: ^}
+  - {t: '=', h: +}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - {t: '1', h: Sft+!}
+  - {t: '2', h: '@'}
+  - {t: '3', h: '#'}
+  - $$mdi:division$$
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - Boot
+  - ''
+  - {t: ▽, type: trans}
+  - $$mdi:circle-small$$
+  - '0'
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Function:
+  - ''
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: PRINTSCREEN, h: Ctl+PRINTSCREEN}
+  - ''
+  - ''
+  - F11
+  - {t: F4, h: Alt+F4}
+  - F5
+  - F6
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  Media:
+  - ''
+  - ''
+  - $$mdi:play-pause$$
+  - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$mdi:volume-off$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Mouse:
+  - ''
+  - ''
+  - '&mkp LCLK'
+  - '&mmv MOVE_UP'
+  - '&mkp RCLK'
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - ''
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MCLK'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+combos:
+- p: [16, 15]
+  k: Esc
+- p: [5, 17]
+  k: '%'
+- p: [28, 16]
+  k: '='
+- p: [4, 16]
+  k: $
+- p: [3, 15]
+  k: '#'
+- p: [2, 14]
+  k: '@'
+- p: [26, 14]
+  k: \
+- p: [27, 26]
+  k: Ctl+C
+- p: [27, 28]
+  k: Ctl+V
+- p: [8, 20]
+  k: '*'
+- p: [32, 20]
+  k: /
+- p: [7, 19]
+  k: +
+- p: [31, 19]
+  k: $$mdi:minus$$
+- p: [30, 18]
+  k: _
+- p: [7, 8]
+  k: '['
+- p: [8, 9]
+  k: ']'
+- p: [31, 32]
+  k: {t: (, s: <}
+- p: [33, 32]
+  k: {t: ), s: '>'}
+- p: [19, 21]
+  k: $$mdi:keyboard-return$$
