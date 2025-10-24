@@ -12,7 +12,7 @@ layers:
     - $$mdi:backspace$$
   Test:
   - [TAB, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-reverse-outline$$']
-  - - {t: Esc, h: Media}
+  - - {t: Esc, h: Mouse}
     - {t: A, h: '$$mdi:apple-keyboard-control$$'}
     - {t: S, h: '$$mdi:apple-keyboard-option$$'}
     - {t: D, h: '$$mdi:apple-keyboard-command$$'}
@@ -36,7 +36,7 @@ layers:
     - {t: ., h: '>'}
     - {t: /, h: '?'}
     - $$mdi:apple-keyboard-shift$$
-  - - $$mdi:apple-keyboard-command$$
+  - - {t: LMETA, h: Media}
     - {t: '$$mdi:backspace$$', h: Nav}
     - {t: '$$mdi:keyboard-return$$', h: Function}
     - {t: '$$mdi:keyboard-space$$', h: Numbers}
@@ -226,23 +226,29 @@ layers:
     - ''
   Media:
   - ['', '', '$$mdi:play-pause$$', '$$mdi:skip-previous$$', '$$mdi:skip-next$$', '', '', '', '', '', '', '']
+  - ['', '', '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {type: held}
     - ''
-    - $$mdi:volume-off$$
-    - $$mdi:volume-low$$
-    - $$mdi:volume-high$$
     - ''
     - ''
     - ''
     - ''
-    - ''
-    - ''
-    - ''
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '']
   Mouse:
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '$$mdi:mouse-left-click-outline$$', '$$mdi:mouse$$', '$$mdi:mouse-right-click-outline$$', '', '$$mdi:arrow-left$$', '$$mdi:arrow-down$$', '$$mdi:arrow-up$$',
+    '$$mdi:arrow-right$$', '', '']
+  - - {type: held}
+    - ''
+    - $$mdi:mouse$$
+    - $$mdi:mouse$$
+    - $$mdi:mouse$$
+    - ''
+    - ''
+    - $$mdi:mouse-left-click-outline$$
+    - $$mdi:mouse-right-click-outline$$
+    - Middle Click
+    - ''
+    - ''
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - ['', '', '', '', '', '']
 combos:
