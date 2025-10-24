@@ -46,10 +46,10 @@ parse_config:
     "&browsertabB": Ctrl+Tab
     "&browsertabF": Ctrl+Shift+Tab
     "&studio_unlock": Studio Unlock
-    "&mmv MOVE_UP": $$mdi:mouse$$
-    "&mmv MOVE_DOWN": $$mdi:mouse$$
-    "&mmv MOVE_RIGHT": $$mdi:mouse$$
-    "&mmv MOVE_LEFT": $$mdi:mouse$$
+    "&mmv MOVE_UP": $$mdi:arrow-up$$
+    "&mmv MOVE_DOWN": $$mdi:arrow-down$$
+    "&mmv MOVE_RIGHT": $$mdi:arrow-right$$
+    "&mmv MOVE_LEFT": $$mdi:arrow-left$$
     "&mkp LCLK": $$mdi:mouse-left-click-outline$$
     "&mkp MCLK": Middle Click
     "&mkp RCLK": $$mdi:mouse-right-click-outline$$
