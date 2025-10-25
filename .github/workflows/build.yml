@@ -35,10 +35,15 @@ jobs:
           name: firmware-for-release
           path: ./firmware
 
-      - name: Upload firmware files to GitHub Release
+      - name: Zip firmware files
+        run: |
+          cd ./firmware
+          zip firmware_bundle.zip *.uf2
+
+      - name: Upload firmware zip to GitHub Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: ./firmware/*.uf2
+          files: ./firmware/firmware_bundle.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
