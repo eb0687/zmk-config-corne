@@ -1,10 +1,17 @@
-name: Download Firmware Artifact
+name: Release Firmware
 
 on:
+  workflow_run:
+    workflows: ["Build"] # Must match the 'name:' in build.yml
+    types:
+      - completed
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
   download-artifact:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact from build workflow
@@ -16,3 +23,28 @@ jobs:
           path: ./firmware
           branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload downloaded firmware artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: ./firmware
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Firmware Release ${{ github.ref_name }}"
+          body: |
+            Automated firmware release for ${{ github.ref_name }}.
+            - Commit: ${{ github.sha }}
+            - Branch: ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload firmware to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./firmware/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
