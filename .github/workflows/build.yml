@@ -3,3 +3,18 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  download-artifact:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: ./firmware
+
+      - name: Show downloaded files
+        run: |
+          echo "Firmware artifact downloaded to:"
+          ls -lR ./firmware
