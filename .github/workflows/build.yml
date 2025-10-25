@@ -19,10 +19,22 @@ jobs:
           echo "Firmware artifact downloaded to:"
           ls -lR ./firmware
 
+      - name: Upload firmware artifact for next job
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-for-release
+          path: ./firmware/*.uf2
+
   upload-release:
     needs: download-artifact
     runs-on: ubuntu-latest
     steps:
+      - name: Download firmware artifact from previous job
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware-for-release
+          path: ./firmware
+
       - name: Upload firmware files to GitHub Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
