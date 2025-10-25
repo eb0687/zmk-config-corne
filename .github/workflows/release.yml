@@ -1,0 +1,37 @@
+name: Upload Firmware to Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+
+jobs:
+  upload-release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        uses: cli/gh-action@v2
+
+      - name: Download firmware artifact from latest master build
+        run: |
+          gh run download $(gh run list -w build.yml -b master -L 1 --json databaseId --jq '.[0].databaseId') -n firmware
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Find firmware zip file
+        id: find_zip
+        run: |
+          ZIP_FILE=$(find firmware -name '*.zip' | head -n 1)
+          echo "zip_file=$ZIP_FILE" >> $GITHUB_OUTPUT
+
+      - name: Upload to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.find_zip.outputs.zip_file }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
