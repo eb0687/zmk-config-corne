@@ -1,22 +1,20 @@
 name: Upload Firmware to Release
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - master
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   upload-release:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install GitHub CLI
-        uses: actions/github-script@v7
+        uses: cli/gh-action@v2
 
       - name: Download firmware artifact from latest master build
         run: |
