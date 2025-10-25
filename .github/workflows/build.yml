@@ -8,17 +8,24 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download firmware.zip artifact as zip
-        run: |
-          gh run download ${{ github.run_id }} -n firmware
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: ./firmware
 
       - name: Show downloaded files
         run: |
-          echo "Firmware.zip artifact downloaded to:"
-          ls -lh firmware.zip || echo "firmware.zip not found"
-          ls -lR .
+          echo "Firmware artifact downloaded to:"
+          ls -lR ./firmware
+
+  upload-release:
+    needs: download-artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload firmware files to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./firmware/*.uf2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
