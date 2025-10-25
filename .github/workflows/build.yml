@@ -25,6 +25,7 @@ jobs:
     steps:
       - name: Upload firmware files to GitHub Release
         uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         with:
           files: ./firmware/*.uf2
         env:
