@@ -21,22 +21,10 @@ jobs:
 
       - name: Prepare firmware zip
         run: |
-          echo "Looking for firmware.zip in workspace..."
-          # show a short listing to help debugging
-          echo "Workspace root: $(pwd)"
-          find . -maxdepth 6 -type f -name 'firmware.zip' -print
-          SRC=$(find . -maxdepth 6 -type f -name 'firmware.zip' | head -n1)
-          if [ -z "$SRC" ]; then
-            echo "ERROR: firmware.zip not found after downloading artifacts."
-            echo "Workspace listing (top-level):"
-            ls -la || true
-            echo "Full find output (maxdepth 6):"
-            find . -maxdepth 6 -print || true
-            exit 1
-          fi
-          echo "Found firmware at: $SRC"
-          cp "$SRC" ./firmware.zip
-          echo "Copied to ./firmware.zip"
+          echo "Zipping all .uf2 files into firmware.zip..."
+          ls -la
+          zip -j firmware.zip ./*.uf2
+          echo "Created firmware.zip:"
           ls -la firmware.zip
 
       - name: Create GitHub Release
