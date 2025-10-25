@@ -27,9 +27,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download firmware artifact from latest master build
+      - name: Download firmware artifact from latest successful master build
         run: |
-          gh run download $(gh run list -w build.yml -b master -L 1 --json databaseId --jq '.[0].databaseId') -n firmware
+          RUN_ID=$(gh run list -w build.yml -b master --status success -L 1 --json databaseId --jq '.[0].databaseId')
+          gh run download $RUN_ID -n firmware
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
