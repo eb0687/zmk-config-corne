@@ -8,13 +8,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download firmware artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: firmware
-          path: ./firmware
+      - name: Download firmware.zip artifact as zip
+        run: |
+          gh run download ${{ github.run_id }} -n firmware
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Show downloaded files
         run: |
-          echo "Firmware artifact downloaded to:"
-          ls -lR ./firmware
+          echo "Firmware.zip artifact downloaded to:"
+          ls -lh firmware.zip || echo "firmware.zip not found"
+          ls -lR .
