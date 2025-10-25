@@ -19,6 +19,9 @@ jobs:
         with:
           name: firmware
 
+      - name: Prepare firmware zip
+        run: cp firmware/firmware.zip .
+
       - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
