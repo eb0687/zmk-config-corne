@@ -24,3 +24,4 @@ Below is a wip keymap for the Corne Wireless keyboard.
 - Easy way to customize the keymap? Refer to [this](https://www.keyboardhoarders.com/post/1288093071901/zmk-change-keymap-walkthrough) guide
 - [keymap-drawer](https://keymap-drawer.streamlit.app/)
 - [keymap-editor](https://nickcoutsos.github.io/keymap-editor/)
+-
