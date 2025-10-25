@@ -1,17 +1,13 @@
 name: Release Firmware
 
 on:
-  workflow_run:
-    workflows: ["Build"] # Must match the 'name:' in build.yml
-    types:
-      - completed
-    branches:
-      - master
-  workflow_dispatch:
+  push:
+    tags:
+      - "*" # Triggers on any tag push
 
 jobs:
   download-artifact:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact from build workflow
