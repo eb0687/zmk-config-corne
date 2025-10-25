@@ -8,6 +8,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Download firmware.zip artifact as zip
         run: |
           gh run download ${{ github.run_id }} -n firmware
