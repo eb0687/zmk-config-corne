@@ -1,4 +1,8 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -38,12 +42,12 @@ jobs:
       - name: Zip firmware files
         run: |
           cd ./firmware
-          zip firmware_bundle.zip *.uf2
+          zip firmware.zip *.uf2
 
       - name: Upload firmware zip to GitHub Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: ./firmware/firmware_bundle.zip
+          files: ./firmware/firmware.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
