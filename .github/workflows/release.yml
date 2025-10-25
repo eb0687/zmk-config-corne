@@ -1,122 +1,33 @@
 name: Release Firmware
 
 on:
-  push:
-    tags:
-      - "*" # Triggers on any tag push
+  workflow_run:
+    workflows: ["build.yml"]
+    types: [completed]
 
 jobs:
-  release-on-dispatch:
-    if: ${{ github.event_name == 'workflow_dispatch' }}
+  release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Download artifact from build workflow
+      - name: Download firmware artifact
         uses: dawidd6/action-download-artifact@v3
         with:
           workflow: build.yml
           workflow_conclusion: success
           name: firmware
           path: ./firmware
-          branch: master
+          commit: ${{ github.event.workflow_run.head_sha }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload downloaded firmware artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: firmware
-          path: ./firmware
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.sha }}
-          name: "Firmware Release ${{ github.sha }}"
+          tag_name: ${{ github.event.workflow_run.head_branch }} # Replace with tag if available
+          name: "Firmware Release ${{ github.event.workflow_run.head_branch }}"
           body: |
-            Automated firmware release for commit ${{ github.sha }}.
-            - Branch: ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload firmware to release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: ./firmware/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  release-on-workflow-run:
-    if: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact from build workflow
-        uses: dawidd6/action-download-artifact@v3
-        with:
-          workflow: build.yml
-          workflow_conclusion: success
-          name: firmware
-          path: ./firmware
-          branch: master
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload downloaded firmware artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: firmware
-          path: ./firmware
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.sha }}
-          name: "Firmware Release ${{ github.sha }}"
-          body: |
-            Automated firmware release for commit ${{ github.sha }}.
-            - Branch: ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload firmware to release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: ./firmware/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  release-on-tag:
-    if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact from build workflow
-        uses: dawidd6/action-download-artifact@v3
-        with:
-          workflow: build.yml
-          workflow_conclusion: success
-          name: firmware
-          path: ./firmware
-          branch: master
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload downloaded firmware artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: firmware
-          path: ./firmware
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: "Firmware Release ${{ github.ref_name }}"
-          body: |
-            Automated firmware release for ${{ github.ref_name }}.
-            - Commit: ${{ github.sha }}
-            - Branch: ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload firmware to release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: ./firmware/*
+            Automated firmware release for commit ${{ github.event.workflow_run.head_sha }}.
+          files: ./firmware/firmware.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
