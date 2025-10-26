@@ -24,8 +24,8 @@ have seen online. Some of the features include:
 ### Installation
 
 > [!WARNING]
-> Assumptions made here are that you have a keyboard with nice nano v2
-> Using a windows based pc. The process should be similar for other OS's but I
+> Assumptions made here are that you have a keyboard with nice nano v2.
+> Also that you are using a windows based pc. The process should be similar for other OS's but I
 > have not tested it myself
 
 The [releases page](https://github.com/eb0687/zmk-config-corne/releases) will always contain the latest compiled firmware files for
