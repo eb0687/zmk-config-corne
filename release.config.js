@@ -6,7 +6,7 @@ const config = {
     [
       "@semantic-release/github",
       {
-        assets: [{ path: "firmware/firmware.zip", label: "Firmware ZIP" }],
+        assets: [{ path: "firmware/firmware.zip", label: "Firmware" }],
       },
     ],
     [
