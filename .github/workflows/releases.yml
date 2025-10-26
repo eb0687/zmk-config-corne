@@ -1,0 +1,81 @@
+name: Build and release
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read # to be able to checkout code
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for trusted publishing and npm provenance
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: ./firmware
+
+      - name: Show downloaded files
+        run: |
+          echo "Firmware artifact downloaded to:"
+          ls -lR ./firmware
+
+      - name: Prepare firmware zip
+        run: |
+          cd ./firmware
+          zip firmware.zip *.uf2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Run semantic release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
+
+      # - name: Upload firmware artifact for next job
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: firmware-for-release
+      #     path: ./firmware/*.uf2
+
+  # upload-release:
+  #   needs: release
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Download firmware artifact from previous job
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: firmware-for-release
+  #         path: ./firmware
+  #
+  #     - name: Zip firmware files
+  #       run: |
+  #         cd ./firmware
+  #         zip firmware.zip *.uf2
+  #
+  #     - name: Upload firmware zip to GitHub Release
+  #       uses: softprops/action-gh-release@v2
+  #       if: github.ref_type == 'tag'
+  #       with:
+  #         files: ./firmware/firmware.zip
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
