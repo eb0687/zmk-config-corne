@@ -20,6 +20,7 @@ have seen online. Some of the features include:
 - [Autoshift](https://github.com/nickcoutsos/keymap-editor/wiki/Autoshift-using-ZMK-behaviors), I personlly dont use the approach mentioned and instead use a simpler approach using [Hold-tap](https://zmk.dev/docs/keymaps/behaviors/hold-tap#example-use-cases) behaviour.
 - [Mouse emulation](https://zmk.dev/docs/keymaps/behaviors/mouse-emulation)
 - [Combos](https://zmk.dev/docs/keymaps/combos)
+- Layers
 
 ### Installation
 
@@ -54,6 +55,21 @@ At this point the firmware should be installed and the keyboard ready to use.
 
 If for any reason it does not work as expected, repeat the process again ensurason it does not work as expected, repeat the process again
 ensuring that you are draggin in the correct files for each half.
+
+### Usage
+
+Connect the keyboard via bluetooth or usb to the device and your good to go.
+
+Refer to the keymap diagram below for the layout and how to access the various
+layers and features.
+
+The keyboard starts in layer 0 called **Base** and is a fairly standard keyboard
+layout.
+
+The interesting bits live in the **Test** layer.
+To toggle over, you would need to trigger it via a [conditional layer](https://zmk.dev/docs/keymaps/conditional-layers) switch. Refer to the keymap diagram below and look for
+the **System** layer. You should be able to see the Test toggle layer key in the
+diagram.
 
 ### Keymap for Corne Wireless
 
