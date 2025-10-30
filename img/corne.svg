@@ -42,12 +42,6 @@
 <svg id="mdi:backspace-reverse-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-backspace-reverse-outline" viewBox="0 0 24 24"><path d="M5,15.59L6.41,17L10,13.41L13.59,17L15,15.59L11.41,12L15,8.41L13.59,7L10,10.59L6.41,7L5,8.41L8.59,12L5,15.59M2,3A2,2 0 0,0 0,5V19A2,2 0 0,0 2,21H17C17.69,21 18.23,20.64 18.59,20.11L24,12L18.59,3.88C18.23,3.35 17.69,3 17,3H2M2,5H17L21.72,12L17,19H2V5Z" /></svg>
 </svg>
-<svg id="mdi:circle-small">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-circle-small" viewBox="0 0 24 24"><path d="M12,10A2,2 0 0,0 10,12C10,13.11 10.9,14 12,14C13.11,14 14,13.11 14,12A2,2 0 0,0 12,10Z" /></svg>
-</svg>
-<svg id="mdi:division">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-division" viewBox="0 0 24 24"><path d="M19,13H5V11H19V13M12,5A2,2 0 0,1 14,7A2,2 0 0,1 12,9A2,2 0 0,1 10,7A2,2 0 0,1 12,5M12,15A2,2 0 0,1 14,17A2,2 0 0,1 12,19A2,2 0 0,1 10,17A2,2 0 0,1 12,15Z" /></svg>
-</svg>
 <svg id="mdi:home-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-home-outline" viewBox="0 0 24 24"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg>
 </svg>
@@ -650,7 +644,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-11" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
+<text x="0" y="-4" class="key tap">BSPC</text>
 <a href="#Nav">
 <text x="0" y="24" class="key hold layer-activator">Nav</text>
 </a></g>
@@ -678,7 +672,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(616, 205)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-11" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
+<text x="0" y="-4" class="key tap">BSPC</text>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:backspace"/>
 </g>
 </g>
@@ -1237,10 +1231,12 @@ path.combo { stroke: #7f7f7f; }
 <tspan x="0" dy="-1.2em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan><tspan x="0" dy="1.2em">ALL</tspan>
 </text>
 </g>
-<g transform="translate(532, 154)" class="key trans keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
-<text x="0" y="-4" class="key trans tap">▽</text>
+<g transform="translate(532, 154)" class="key keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em" style="font-size: 78%">&amp;num_word</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">5</tspan>
+</text>
 </g>
 <g transform="translate(588, 147)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -1429,6 +1425,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(84, 161)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">*</text>
 </g>
 <g transform="translate(140, 147)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1451,7 +1448,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(308, 154)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:division" xlink:href="#mdi:division" x="-7" y="-11" height="14" width="14.0" class="key tap glyph mdi:division"/>
+<text x="0" y="-4" class="key tap">/</text>
 </g>
 <g transform="translate(532, 154)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1487,7 +1484,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:circle-small" xlink:href="#mdi:circle-small" x="-7" y="-11" height="14" width="14.0" class="key tap glyph mdi:circle-small"/>
+<text x="0" y="-4" class="key tap">.</text>
 </g>
 <g transform="translate(351, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key side"/>
