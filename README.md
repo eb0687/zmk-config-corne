@@ -21,6 +21,8 @@ have seen online. Some of the features include:
 - [Mouse emulation](https://zmk.dev/docs/keymaps/behaviors/mouse-emulation)
 - [Combos](https://zmk.dev/docs/keymaps/combos)
 - Layers
+- Urob's [auto-layer](https://github.com/urob/zmk-auto-layer) module (currently
+  testing num_word)
 
 ### Installation
 
