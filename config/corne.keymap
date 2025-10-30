@@ -76,6 +76,13 @@
             global-quick-tap;
             hold-trigger-on-release;
         };
+
+        smart_mouse: smart_mouse {
+              compatible = "zmk,behavior-auto-layer";
+              #binding-cells = <1>;
+              continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
+              ignore-modifiers;
+        };
     };
 
     macros {
@@ -278,9 +285,9 @@
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6       &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans       &tog 1  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &num_word 5  &trans  &trans  &trans  &bootloader  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6       &kp F7          &kp F8  &kp F9  &kp F10      &trans
+&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans       &tog 1          &trans  &trans  &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &num_word 5  &smart_mouse 8  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans       &trans  &trans
             >;
         };
