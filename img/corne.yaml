@@ -204,7 +204,7 @@ layers:
   - BT CLR
   - BT CLR ALL
   - '&num_word 5'
-  - {t: ▽, type: trans}
+  - '&smart_mouse 8'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Boot
