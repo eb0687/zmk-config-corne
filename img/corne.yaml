@@ -80,7 +80,7 @@ layers:
   - {t: ., h: '>'}
   - {t: /, h: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: LMETA, h: Media}
+  - {t: '$$mdi:apple-keyboard-command$$', h: Media}
   - {t: BSPC, h: Nav}
   - {t: '$$mdi:keyboard-return$$', h: Function}
   - {t: '$$mdi:keyboard-space$$', h: Numbers}
@@ -276,7 +276,7 @@ layers:
   - {t: F4, h: Alt+F4}
   - F5
   - F6
-  - Sft+$$mdi:keyboard-space$$
+  - Kando
   - ''
   - ''
   - ''
@@ -289,8 +289,8 @@ layers:
   - F2
   - F3
   - ''
-  - '&num_word 5'
-  - '&smart_mouse 8'
+  - Num Word
+  - Smart Mouse
   - ''
   - ''
   - ''
@@ -316,13 +316,13 @@ layers:
   - ''
   - ''
   - ''
-  - MUTE
+  - $$mdi:volume-off$$
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
   - ''
   - ''
-  - Ctl+Alt+F11
-  - Ctl+F12
+  - Sound Switch
+  - Ear Trumpet
   - ''
   - ''
   - ''
