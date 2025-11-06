@@ -244,11 +244,17 @@ parse_config:
     KP_MINUS: $$mdi:minus$$
 
     ENTER: $$mdi:keyboard-return$$
+    RET: $$mdi:keyboard-return$$
     BACKSPACE: $$mdi:backspace$$
+    BSPC: $$mdi:backspace$$
+    LC(BACKSPACE): Erase Word
     ESCAPE: Esc
+    INSERT: Insert
     CAPSLOCK: Caps
     SPACE: $$mdi:keyboard-space$$
     DELETE: $$mdi:backspace-reverse-outline$$
+    LC(PRINTSCREEN): Region
+    PRINTSCREEN: Screenshot
 
     LCTRL: $$mdi:apple-keyboard-control$$
     LEFT_ALT: $$mdi:apple-keyboard-option$$
