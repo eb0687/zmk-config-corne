@@ -41,10 +41,10 @@ layers:
   - Nav
   - $$mdi:keyboard-return$$
   - $$mdi:keyboard-space$$
-  - {t: TAB, h: Symbols}
+  - {t: '$$mdi:keyboard-tab$$', h: Symbols}
   - $$mdi:backspace$$
   Test:
-  - TAB
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -84,7 +84,7 @@ layers:
   - {t: '$$mdi:backspace$$', h: Nav}
   - {t: '$$mdi:keyboard-return$$', h: Function}
   - {t: '$$mdi:keyboard-space$$', h: Numbers}
-  - {t: TAB, h: Symbols}
+  - {t: '$$mdi:keyboard-tab$$', h: Symbols}
   - {t: '$$mdi:backspace$$', h: Erase Word}
   Nav:
   - Boot
@@ -105,10 +105,10 @@ layers:
   - Ctrl+Tab
   - Ctrl+Shift+Tab
   - ''
-  - {t: '$$mdi:arrow-left-bold$$', h: 'Ctl+$$mdi:arrow-left-bold$$'}
-  - {t: '$$mdi:arrow-down-bold$$', h: Ctl+END}
-  - {t: '$$mdi:arrow-up-bold$$', h: 'Ctl+$$mdi:home-outline$$'}
-  - {t: '$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:arrow-right-bold$$'}
+  - {t: '$$mdi:arrow-left-bold$$', h: Ctl+Left}
+  - {t: '$$mdi:arrow-down-bold$$', h: Ctl+End}
+  - {t: '$$mdi:arrow-up-bold$$', h: Ctl+Home}
+  - {t: '$$mdi:arrow-right-bold$$', h: Ctl+Right}
   - ''
   - ''
   - ''
@@ -117,10 +117,10 @@ layers:
   - ''
   - ''
   - ''
-  - $$mdi:home-outline$$
-  - $$mdi:transfer-down$$
-  - $$mdi:transfer-up$$
-  - END
+  - Home
+  - Page Down
+  - Page Up
+  - End
   - ''
   - ''
   - $$mdi:apple-keyboard-command$$
