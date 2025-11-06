@@ -81,11 +81,11 @@ layers:
   - {t: /, h: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:apple-keyboard-command$$', h: Media}
-  - {t: BSPC, h: Nav}
+  - {t: '$$mdi:backspace$$', h: Nav}
   - {t: '$$mdi:keyboard-return$$', h: Function}
   - {t: '$$mdi:keyboard-space$$', h: Numbers}
   - {t: TAB, h: Symbols}
-  - {t: BSPC, h: 'Ctl+$$mdi:backspace$$'}
+  - {t: '$$mdi:backspace$$', h: Erase Word}
   Nav:
   - Boot
   - ''
@@ -168,7 +168,7 @@ layers:
   - ''
   - $$mdi:apple-keyboard-command$$
   - ''
-  - RET
+  - $$mdi:keyboard-return$$
   - $$mdi:keyboard-space$$
   - {type: held}
   - {t: ▽, type: trans}
@@ -269,8 +269,8 @@ layers:
   - ''
   - ''
   - ''
-  - {t: PRINTSCREEN, h: Ctl+PRINTSCREEN}
-  - INSERT
+  - {t: Screenshot, h: Region}
+  - Insert
   - ''
   - F11
   - {t: F4, h: Alt+F4}
