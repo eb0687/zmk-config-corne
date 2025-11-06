@@ -36,12 +36,12 @@ layers:
     - {t: ., h: '>'}
     - {t: /, h: '?'}
     - $$mdi:apple-keyboard-shift$$
-  - - {t: LMETA, h: Media}
-    - {t: '$$mdi:backspace$$', h: Nav}
+  - - {t: '$$mdi:apple-keyboard-command$$', h: Media}
+    - {t: BSPC, h: Nav}
     - {t: '$$mdi:keyboard-return$$', h: Function}
     - {t: '$$mdi:keyboard-space$$', h: Numbers}
     - {t: TAB, h: Symbols}
-    - {t: '$$mdi:backspace$$', h: 'Ctl+$$mdi:backspace$$'}
+    - {t: BSPC, h: 'Ctl+$$mdi:backspace$$'}
   Nav:
   - [Boot, '', '', '', '', '', '', '', '', '', '', '']
   - - Caps Word
@@ -175,11 +175,11 @@ layers:
     - {t: ▽, type: trans}
     - ''
   - - ''
-    - ''
+    - '*'
     - {t: '1', h: Sft+!}
     - {t: '2', h: '@'}
     - {t: '3', h: '#'}
-    - $$mdi:division$$
+    - /
     - ''
     - ''
     - ''
@@ -187,7 +187,7 @@ layers:
     - Boot
     - ''
   - - {t: ▽, type: trans}
-    - $$mdi:circle-small$$
+    - .
     - '0'
     - {type: held}
     - {t: ▽, type: trans}
@@ -204,20 +204,20 @@ layers:
     - ''
     - ''
     - {t: PRINTSCREEN, h: Ctl+PRINTSCREEN}
-    - ''
+    - INSERT
   - - ''
     - F11
     - {t: F4, h: Alt+F4}
     - F5
     - F6
+    - Kando
     - ''
     - ''
     - ''
     - ''
     - ''
     - ''
-    - ''
-  - ['', F10, F1, F2, F3, '', '', '', '', '', '', '']
+  - ['', F10, F1, F2, F3, '', Num Word, Smart Mouse, '', '', '', '']
   - - ''
     - ''
     - {type: held}
@@ -226,7 +226,7 @@ layers:
     - ''
   Media:
   - ['', '', '$$mdi:play-pause$$', '$$mdi:skip-previous$$', '$$mdi:skip-next$$', '', '', '', '', '', '', '']
-  - ['', '', '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '', '', '', '', '', '', '']
+  - ['', '', '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '', '', Sound Switch, Ear Trumpet, '', '', '']
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {type: held}
     - ''

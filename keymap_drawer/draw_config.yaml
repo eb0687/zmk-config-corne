@@ -57,6 +57,8 @@ parse_config:
     "&msc SCRL_DOWN": $$mdi:arrow-down$$
     "&msc SCRL_LEFT": $$mdi:arrow-left$$
     "&msc SCRL_RIGHT": $$mdi:arrow-right$$
+    "&smart_mouse": Smart Mouse
+    "&num_word": Num Word
 
   sticky_label: sticky
   toggle_label: toggle
@@ -229,7 +231,7 @@ parse_config:
     PAGE_UP: $$mdi:transfer-up$$
     PAGE_DOWN: $$mdi:transfer-down$$
 
-    K_MUTE: $$mdi:volume-off$$
+    C_MUTE: $$mdi:volume-off$$
     C_VOLUME_UP: $$mdi:volume-high$$
     C_VOLUME_DOWN: $$mdi:volume-low$$
 
@@ -254,6 +256,7 @@ parse_config:
     LSHFT: $$mdi:apple-keyboard-shift$$
     LGUI: $$mdi:apple-keyboard-command$$
     LEFT_META: $$mdi:apple-keyboard-command$$
+    LMETA: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_ALT: $$mdi:apple-keyboard-option$$
     RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
@@ -261,6 +264,12 @@ parse_config:
     RIGHT_META: $$mdi:apple-keyboard-command$$
 
     HOME: $$mdi:home-outline$$
+
+    LS(SPACE): Kando
+
+    # Windows Only
+    LC(LA(F11)): Sound Switch
+    LC(F12): Ear Trumpet
 
   zmk_combos: {}
   zmk_preamble: "#define KEYMAP_DRAWER"
