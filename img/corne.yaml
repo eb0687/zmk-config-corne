@@ -203,8 +203,8 @@ layers:
   - {t: BT, h: '2'}
   - BT CLR
   - BT CLR ALL
-  - '&num_word 5'
-  - '&smart_mouse 8'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Boot
@@ -289,8 +289,8 @@ layers:
   - F2
   - F3
   - ''
-  - ''
-  - ''
+  - '&num_word 5'
+  - '&smart_mouse 8'
   - ''
   - ''
   - ''
