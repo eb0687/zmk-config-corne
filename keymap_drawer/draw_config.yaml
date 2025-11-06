@@ -218,18 +218,15 @@ parse_config:
     NUHS: "#"
     TILDE2: "~"
 
-    # UP_ARROW: ↑
-    # DOWN_ARROW: ↓
-    # LEFT: ←
-    # LEFT_ARROW: ←
-    # RIGHT_ARROW: →
     UP_ARROW: $$mdi:arrow-up-bold$$
     DOWN_ARROW: $$mdi:arrow-down-bold$$
     LEFT_ARROW: $$mdi:arrow-left-bold$$
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT_ARROW: $$mdi:arrow-right-bold$$
-    PAGE_UP: $$mdi:transfer-up$$
-    PAGE_DOWN: $$mdi:transfer-down$$
+    PAGE_UP: Page Up
+    PAGE_DOWN: Page Down
+    LC(LEFT_ARROW): Ctl+Left
+    LC(RIGHT_ARROW): Ctl+Right
 
     C_MUTE: $$mdi:volume-off$$
     C_VOLUME_UP: $$mdi:volume-high$$
@@ -251,6 +248,7 @@ parse_config:
     ESCAPE: Esc
     INSERT: Insert
     CAPSLOCK: Caps
+    TAB: $$mdi:keyboard-tab$$
     SPACE: $$mdi:keyboard-space$$
     DELETE: $$mdi:backspace-reverse-outline$$
     LC(PRINTSCREEN): Region
@@ -269,7 +267,8 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RIGHT_META: $$mdi:apple-keyboard-command$$
 
-    HOME: $$mdi:home-outline$$
+    HOME: Home
+    END: End
 
     LS(SPACE): Kando
 
