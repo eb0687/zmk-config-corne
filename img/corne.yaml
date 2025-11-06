@@ -270,13 +270,13 @@ layers:
   - ''
   - ''
   - {t: PRINTSCREEN, h: Ctl+PRINTSCREEN}
-  - ''
+  - INSERT
   - ''
   - F11
   - {t: F4, h: Alt+F4}
   - F5
   - F6
-  - ''
+  - Sft+$$mdi:keyboard-space$$
   - ''
   - ''
   - ''
@@ -316,13 +316,13 @@ layers:
   - ''
   - ''
   - ''
-  - $$mdi:volume-off$$
+  - MUTE
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
   - ''
   - ''
-  - ''
-  - ''
+  - Ctl+Alt+F11
+  - Ctl+F12
   - ''
   - ''
   - ''
