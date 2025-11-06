@@ -18,11 +18,23 @@ have seen online. Some of the features include:
 - [Homerow mods](https://precondition.github.io/home-row-mods#what-are-home-row-mods)
 - [Capsword](https://zmk.dev/docs/config/behaviors#caps-word)
 - [Autoshift](https://github.com/nickcoutsos/keymap-editor/wiki/Autoshift-using-ZMK-behaviors), I personlly dont use the approach mentioned and instead use a simpler approach using [Hold-tap](https://zmk.dev/docs/keymaps/behaviors/hold-tap#example-use-cases) behaviour.
+  - Num word
+  - Smart mouse
 - [Mouse emulation](https://zmk.dev/docs/keymaps/behaviors/mouse-emulation)
 - [Combos](https://zmk.dev/docs/keymaps/combos)
 - Layers
 - Urob's [auto-layer](https://github.com/urob/zmk-auto-layer) module (currently
   testing num_word)
+
+I also added a couple of custom key that I use often on for specific apps on
+window based systems:
+
+- Soundwitch
+- EarTrumpet
+- Kando
+
+These will only work on windows based systems with their respective apps
+installed.
 
 ### Installation
 
