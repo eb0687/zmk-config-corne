@@ -87,8 +87,8 @@
         td_semicolon_ctrl_colon: td_semicolon_ctrl_colon {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt RCTRL SEMI>, <&kp COLON>;
+            tapping-term-ms = <175>;
+            bindings = <&mt2 RCTRL SEMI>, <&kp COLON>;
         };
     };
 
