@@ -77,6 +77,20 @@
             hold-trigger-on-release;
         };
 
+        mt3: mod_tap_custom_3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT2";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick_tap_ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            hold-trigger-on-release;
+        };
+
         smart_mouse: smart_mouse {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
@@ -88,7 +102,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&mt2 RCTRL SEMI>, <&kp COLON>;
+            bindings = <&mt3 RCTRL SEMI>, <&kp COLON>;
         };
     };
 
