@@ -239,6 +239,7 @@ parse_config:
     KP_DIVIDE: $$mdi:division$$
     KP_DOT: $$mdi:circle-small$$
     KP_MINUS: $$mdi:minus$$
+    RS(EXCLAMATION): "!"
 
     ENTER: $$mdi:keyboard-return$$
     RET: $$mdi:keyboard-return$$
