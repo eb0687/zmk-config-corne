@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            flavor = "balanced"
+            flavor = "balanced";
             bindings = <&mt2 RCTRL SEMI>, <&kp COLON>;
         };
     };
