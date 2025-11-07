@@ -59,6 +59,7 @@ parse_config:
     "&msc SCRL_RIGHT": $$mdi:arrow-right$$
     "&smart_mouse": Smart Mouse
     "&num_word": Num Word
+    "&mt_td_ctl": "; :"
 
   sticky_label: sticky
   toggle_label: toggle

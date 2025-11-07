@@ -84,14 +84,14 @@
             ignore-modifiers;
         };
 
-        td_semi_col: td_space_ctrl {
+        td_semi_col: td_semi_col {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp SEMI>, <&kp COLON>;
         };
 
-        mt_td_ctl: htd_kp_space_ctrl {
+        mt_td_ctl: mt_td_ctrl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
