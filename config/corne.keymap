@@ -6,15 +6,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include "behaviors/tap_dance_mod_tap_custom.dtsi"
 
 #define DEF 0
 #define NAV 1
 #define SYM 2
 #define ADJ 3
 #define EXTRA 4
-
-TAP_DANCE_MOD_TAP(td_scc, RCTRL, SEMICOLON, COLON)
 
 &bootloader {
 };
@@ -85,6 +82,13 @@ TAP_DANCE_MOD_TAP(td_scc, RCTRL, SEMICOLON, COLON)
             #binding-cells = <1>;
             continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
             ignore-modifiers;
+        };
+
+        td_semicolon_ctrl_colon: td_semicolon_ctrl_colon {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RCTRL SEMI>, <&kp COLON>;
         };
     };
 
@@ -253,18 +257,18 @@ TAP_DANCE_MOD_TAP(td_scc, RCTRL, SEMICOLON, COLON)
         Testing {
             display-name = "Test";
             bindings = <
-//    ┌──────────┬────────────┬────────────┬────────────┬────────────┬──────────┐   ┌──────────┬────────────┬─────────────────────┬────────────┬─────────┬─────────┐
-//    │   tab    │     Q      │     W      │     E      │     R      │    T     │   │    Y     │     U      │          I          │     O      │    P    │   del   │
-//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼─────────┼─────────┤
-//    │ lt 8 esc │ mt2 lctl A │ mt2 lalt S │ mt2 lgui D │ mt2 lsft F │    G     │   │    H     │ mt2 rsft J │     mt2 rgui K      │ mt2 ralt L │ &td_scc │ mt2 " ' │
-//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼─────────┼─────────┤
-//    │   lctl   │     Z      │     X      │     C      │     V      │    B     │   │    N     │     M      │       mt2 < ,       │  mt2 > .   │ mt2 ? / │  rsft   │
-//    └──────────┴────────────┴────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┴─────────┴─────────┘
+//    ┌──────────┬────────────┬────────────┬────────────┬────────────┬──────────┐   ┌──────────┬────────────┬─────────────────────┬────────────┬──────────────────────────┬─────────┐
+//    │   tab    │     Q      │     W      │     E      │     R      │    T     │   │    Y     │     U      │          I          │     O      │            P             │   del   │
+//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼──────────────────────────┼─────────┤
+//    │ lt 8 esc │ mt2 lctl A │ mt2 lalt S │ mt2 lgui D │ mt2 lsft F │    G     │   │    H     │ mt2 rsft J │     mt2 rgui K      │ mt2 ralt L │ &td_semicolon_ctrl_colon │ mt2 " ' │
+//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼──────────────────────────┼─────────┤
+//    │   lctl   │     Z      │     X      │     C      │     V      │    B     │   │    N     │     M      │       mt2 < ,       │  mt2 > .   │         mt2 ? /          │  rsft   │
+//    └──────────┴────────────┴────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┴──────────────────────────┴─────────┘
 //                                         │ lt 7 lgui  │ lt 2 bspc  │ lt 6 ent │   │ lt 5 spc │  lt 3 tab  │ mt2 lctl(bspc) bspc │
 //                                         └────────────┴────────────┴──────────┘   └──────────┴────────────┴─────────────────────┘
-  &kp TAB        &kp Q          &kp W             &kp E              &kp R               &kp T             &kp Y         &kp U                &kp I                     &kp O                      &kp P                 &kp DELETE
-  &lt 8 ESCAPE   &mt2 LCTRL A   &mt2 LEFT_ALT S   &mt2 LEFT_META D   &mt2 LEFT_SHIFT F   &kp G             &kp H         &mt2 RIGHT_SHIFT J   &mt2 RIGHT_META K         &mt2 RIGHT_ALT L           &td_scc               &mt2 DOUBLE_QUOTES SQT
-  &kp LCTRL      &kp Z          &kp X             &kp C              &kp V               &kp B             &kp N         &kp M                &mt2 LESS_THAN COMMA      &mt2 GREATER_THAN PERIOD   &mt2 QUESTION SLASH   &kp RSHFT
+  &kp TAB        &kp Q          &kp W             &kp E              &kp R               &kp T             &kp Y         &kp U                &kp I                     &kp O                      &kp P                      &kp DELETE
+  &lt 8 ESCAPE   &mt2 LCTRL A   &mt2 LEFT_ALT S   &mt2 LEFT_META D   &mt2 LEFT_SHIFT F   &kp G             &kp H         &mt2 RIGHT_SHIFT J   &mt2 RIGHT_META K         &mt2 RIGHT_ALT L           &td_semicolon_ctrl_colon   &mt2 DOUBLE_QUOTES SQT
+  &kp LCTRL      &kp Z          &kp X             &kp C              &kp V               &kp B             &kp N         &kp M                &mt2 LESS_THAN COMMA      &mt2 GREATER_THAN PERIOD   &mt2 QUESTION SLASH        &kp RSHFT
                                                   &lt 7 LMETA        &lt 2 BSPC          &lt 6 ENTER       &lt 5 SPACE   &lt 3 TAB            &mt2 LC(BACKSPACE) BSPC
             >;
         };
