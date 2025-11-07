@@ -83,6 +83,23 @@
             continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
             ignore-modifiers;
         };
+
+        td_semi_col: td_space_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp SEMI>, <&kp COLON>;
+        };
+
+        mt_td_ctl: htd_kp_space_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&td_semi_col>;
+            retro-tap;
+        };
     };
 
     macros {
@@ -250,17 +267,17 @@
         Testing {
             display-name = "Test";
             bindings = <
-//    ┌──────────┬────────────┬────────────┬────────────┬────────────┬──────────┐   ┌──────────┬────────────┬─────────────────────┬────────────┬────────────┬─────────┐
-//    │   tab    │     Q      │     W      │     E      │     R      │    T     │   │    Y     │     U      │          I          │     O      │     P      │   del   │
-//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼────────────┼─────────┤
-//    │ lt 8 esc │ mt2 lctl A │ mt2 lalt S │ mt2 lgui D │ mt2 lsft F │    G     │   │    H     │ mt2 rsft J │     mt2 rgui K      │ mt2 ralt L │ mt2 rctl ; │ mt2 " ' │
-//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼────────────┼─────────┤
-//    │   lctl   │     Z      │     X      │     C      │     V      │    B     │   │    N     │     M      │       mt2 < ,       │  mt2 > .   │  mt2 ? /   │  rsft   │
-//    └──────────┴────────────┴────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┴────────────┴─────────┘
+//    ┌──────────┬────────────┬────────────┬────────────┬────────────┬──────────┐   ┌──────────┬────────────┬─────────────────────┬────────────┬──────────────────┬─────────┐
+//    │   tab    │     Q      │     W      │     E      │     R      │    T     │   │    Y     │     U      │          I          │     O      │        P         │   del   │
+//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼──────────────────┼─────────┤
+//    │ lt 8 esc │ mt2 lctl A │ mt2 lalt S │ mt2 lgui D │ mt2 lsft F │    G     │   │    H     │ mt2 rsft J │     mt2 rgui K      │ mt2 ralt L │ mt_td_ctl rctl 0 │ mt2 " ' │
+//    ├──────────┼────────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┼──────────────────┼─────────┤
+//    │   lctl   │     Z      │     X      │     C      │     V      │    B     │   │    N     │     M      │       mt2 < ,       │  mt2 > .   │     mt2 ? /      │  rsft   │
+//    └──────────┴────────────┴────────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼─────────────────────┼────────────┴──────────────────┴─────────┘
 //                                         │ lt 7 lgui  │ lt 2 bspc  │ lt 6 ent │   │ lt 5 spc │  lt 3 tab  │ mt2 lctl(bspc) bspc │
 //                                         └────────────┴────────────┴──────────┘   └──────────┴────────────┴─────────────────────┘
   &kp TAB        &kp Q          &kp W             &kp E              &kp R               &kp T             &kp Y         &kp U                &kp I                     &kp O                      &kp P                 &kp DELETE
-  &lt 8 ESCAPE   &mt2 LCTRL A   &mt2 LEFT_ALT S   &mt2 LEFT_META D   &mt2 LEFT_SHIFT F   &kp G             &kp H         &mt2 RIGHT_SHIFT J   &mt2 RIGHT_META K         &mt2 RIGHT_ALT L           &mt2 RCTRL SEMI       &mt2 DOUBLE_QUOTES SQT
+  &lt 8 ESCAPE   &mt2 LCTRL A   &mt2 LEFT_ALT S   &mt2 LEFT_META D   &mt2 LEFT_SHIFT F   &kp G             &kp H         &mt2 RIGHT_SHIFT J   &mt2 RIGHT_META K         &mt2 RIGHT_ALT L           &mt_td_ctl RCTRL 0    &mt2 DOUBLE_QUOTES SQT
   &kp LCTRL      &kp Z          &kp X             &kp C              &kp V               &kp B             &kp N         &kp M                &mt2 LESS_THAN COMMA      &mt2 GREATER_THAN PERIOD   &mt2 QUESTION SLASH   &kp RSHFT
                                                   &lt 7 LMETA        &lt 2 BSPC          &lt 6 ENTER       &lt 5 SPACE   &lt 3 TAB            &mt2 LC(BACKSPACE) BSPC
             >;
