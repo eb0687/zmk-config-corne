@@ -66,7 +66,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-command$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - '&td_scc'
+  - '&td_semicolon_ctrl_colon'
   - {t: '''', h: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
