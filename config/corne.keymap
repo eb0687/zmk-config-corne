@@ -233,7 +233,7 @@
         };
     };
 
-    #include "../behaviors/behaviors.dtsi"
+    #include "behaviors/behaviors.dtsi"
 
     //
 
