@@ -1,12 +1,13 @@
 / {
-  behaviors {
-        macro_gui_layer: macro_gui_layer{
+    behaviors {
+        macro_gui_layer: macro_gui_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI &mo NUM>;
-                , <&macro_pause_for_release>;
-                , <&macro_release &kp LGUI &mo NUM>;
+            bindings = <
+                &macro_press &kp LGUI &mo NUM
+                &macro_pause_for_release
+                &macro_release &kp LGUI &mo NUM
+            >;
         };
 
         ht_k_gui: ht_k_gui {
@@ -25,3 +26,4 @@
         };
     };
 };
+
