@@ -14,8 +14,8 @@ behaviors {
     ht_k_gui: ht_k_gui {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
+        flavor = "balanced";
+        tapping-term-ms = <280>;
         quick-tap-ms = <175>;
         bindings = <&kp>, <&kp>;
     };
@@ -23,7 +23,7 @@ behaviors {
     td_k_gui: td_k_gui {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <225>;
+        tapping-term-ms = <200>;
         bindings = <&ht_k_gui LGUI K>, <&macro_gui_layer>;
     };
 };
