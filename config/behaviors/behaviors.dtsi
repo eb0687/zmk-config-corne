@@ -23,7 +23,7 @@ behaviors {
     td_k_gui: td_k_gui {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <150>;
         bindings = <&ht_k_gui LGUI K>, <&macro_gui_layer>;
     };
 };
