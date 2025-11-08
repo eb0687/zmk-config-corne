@@ -19,7 +19,6 @@ behaviors {
         bindings = <&kp>, <&kp>;
         quick-tap-ms = <175>;
         global-quick-tap;
-        hold-trigger-on-release;
     };
 
     td_k_gui: td_k_gui {
