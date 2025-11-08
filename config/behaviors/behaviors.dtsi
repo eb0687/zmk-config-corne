@@ -4,10 +4,10 @@ behaviors {
         #binding-cells = <0>;
         bindings = <
             &macro_press &kp LGUI
-            &macro_press &lt 5
+            &macro_press &mo 5
             &macro_pause_for_release
             &macro_release &kp LGUI
-            &macro_release &lt 5
+            &macro_release &mo 5
         >;
     };
 
