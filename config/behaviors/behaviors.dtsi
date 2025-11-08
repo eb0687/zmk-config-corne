@@ -5,7 +5,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LGUI &mo NUM>;
-                , <&macro_pause_for_release>
+                , <&macro_pause_for_release>;
                 , <&macro_release &kp LGUI &mo NUM>;
         };
 
