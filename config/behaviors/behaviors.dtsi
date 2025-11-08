@@ -17,15 +17,15 @@ behaviors {
         tapping-term-ms = <280>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
-        quick-tap-ms = <175>;
         global-quick-tap;
         hold-trigger-on-release;
+        retro-tap;
     };
 
     td_k_gui: td_k_gui {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <225>;
         bindings = <&ht_k_gui LGUI K>, <&macro_gui_layer>;
     };
 };
