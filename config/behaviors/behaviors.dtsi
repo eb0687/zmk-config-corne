@@ -1,29 +1,26 @@
-/ {
-    behaviors {
-        macro_gui_layer: macro_gui_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LGUI &mo NUM
-                &macro_pause_for_release
-                &macro_release &kp LGUI &mo NUM
-            >;
-        };
+behaviors {
+    macro_gui_layer: macro_gui_layer {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_press &kp LGUI &mo NUM
+            &macro_pause_for_release
+            &macro_release &kp LGUI &mo NUM
+        >;
+    };
 
-        ht_k_gui: ht_k_gui {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp K>, <&kp LGUI>;
-        };
+    ht_k_gui: ht_k_gui {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <0>;
+        tapping-term-ms = <175>;
+        flavor = "tap-preferred";
+        bindings = <&kp K>, <&kp LGUI>;
+    };
 
-        td_k_gui: td_k_gui {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&ht_k_gui>, <&macro_gui_layer>;
-        };
+    td_k_gui: td_k_gui {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <175>;
+        bindings = <&ht_k_gui>, <&macro_gui_layer>;
     };
 };
-
