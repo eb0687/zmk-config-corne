@@ -23,4 +23,5 @@
             tapping-term-ms = <175>;
             bindings = <&ht_k_gui>, <&macro_gui_layer>;
         };
+    };
 };
