@@ -156,7 +156,7 @@
         bt_lin: bt_lin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&os_sel OS_LIN>;
+            bindings = <&bt BT_SEL 1>, <&os_sel OS_LIN>;
         };
     };
 
