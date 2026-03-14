@@ -118,19 +118,19 @@
         ok_h1: ok_h1 {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&kp LA(NUMBER_1)>;
+            bindings = <&kp LA(NUMBER_1)>, <&none>, <&kp LA(NUMBER_1)>;
         };
 
         ok_h2: ok_h2 {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&kp LA(NUMBER_2)>;
+            bindings = <&kp LA(NUMBER_2)>, <&none>, <&kp LA(NUMBER_2)>;
         };
 
         ok_h3: ok_h3 {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&kp LA(NUMBER_3)>;
+            bindings = <&kp LA(NUMBER_3)>, <&none>, <&kp LA(NUMBER_3)>;
         };
     };
 
