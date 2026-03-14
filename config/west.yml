@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: mentaldesk
+      url-base: https://github.com/mentaldesk
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -14,5 +16,8 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
       revision: v0.3 # set to same version as zmk above
+    - name: oskey
+      remote: mentaldesk
+      revision: main
   self:
     path: config
