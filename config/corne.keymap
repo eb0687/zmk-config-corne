@@ -106,7 +106,7 @@
         ok_sound: ok_sound {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(F11))>, <&none>, <&kp LC(LGUI(NUMBER_1))>;
+            bindings = <&kp LC(LA(F11))>, <&none>, <&kp LC(LG(NUMBER_1))>;
         };
 
         ok_trumpet: ok_trumpet {
