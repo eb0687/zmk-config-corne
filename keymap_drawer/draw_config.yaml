@@ -60,6 +60,10 @@ parse_config:
     "&smart_mouse": Smart Mouse
     "&num_word": Num Word
     "&td_semi_col": "; :"
+    "&ok_sound": OK Sound
+    "&ok_trumpet": Ear Trumpet
+    "&bit_win": BT_1
+    "&bit_lin": BT_2
 
   sticky_label: sticky
   toggle_label: toggle
