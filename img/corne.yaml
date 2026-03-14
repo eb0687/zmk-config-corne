@@ -198,8 +198,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&bt_win'
-  - '&bt_lin'
+  - BT Win
+  - BT Linux
   - {t: BT, h: '2'}
   - BT CLR
   - BT CLR ALL
