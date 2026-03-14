@@ -198,8 +198,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
+  - '&bt_win'
+  - '&bt_lin'
   - {t: BT, h: '2'}
   - BT CLR
   - BT CLR ALL
@@ -321,8 +321,8 @@ layers:
   - $$mdi:volume-high$$
   - ''
   - ''
-  - Sound Switch
-  - Ear Trumpet
+  - '&ok_sound'
+  - '&ok_trumpet'
   - ''
   - ''
   - ''
