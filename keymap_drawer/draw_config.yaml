@@ -64,6 +64,9 @@ parse_config:
     "&ok_trumpet": Ear Trumpet
     "&bt_win": "BT Win"
     "&bt_lin": "BT Linux"
+    "&ok_h1": "tmux 1"
+    "&ok_h2": "tmux 2"
+    "&ok_h3": "tmux 3"
 
   sticky_label: sticky
   toggle_label: toggle

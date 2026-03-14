@@ -114,6 +114,24 @@
             #binding-cells = <0>;
             bindings = <&kp LC(F12)>, <&none>, <&none>;
         };
+
+        ok_h1: ok_h1 {
+            compatible = "zmk,behavior-os-key";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>, <&kp LA(NUMBER_1)>;
+        };
+
+        ok_h2: ok_h2 {
+            compatible = "zmk,behavior-os-key";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>, <&kp LA(NUMBER_2)>;
+        };
+
+        ok_h3: ok_h3 {
+            compatible = "zmk,behavior-os-key";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>, <&kp LA(NUMBER_3)>;
+        };
     };
 
     macros {
@@ -345,19 +363,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-//    ┌─────┬─────┬─────────┬─────────┬─────────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬──────┐
-//    │     │     │ mt2 ~ ` │    (    │    )    │     │   │     │     │     │     │     │ boot │
-//    ├─────┼─────┼─────────┼─────────┼─────────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┤
-//    │     │     │         │ mt2 { [ │ mt2 } ] │     │   │     │     │     │     │     │      │
-//    ├─────┼─────┼─────────┼─────────┼─────────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┤
-//    │     │     │         │ mt2 | \ │ mt2 ? / │     │   │     │     │     │     │     │      │
-//    └─────┴─────┴─────────┼─────────┼─────────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-//                          │  lgui   │         │ ent │   │ spc │     │     │
-//                          └─────────┴─────────┴─────┘   └─────┴─────┴─────┘
-  &none   &none   &mt2 TILDE GRAVE   &kp LEFT_PARENTHESIS           &kp RIGHT_PARENTHESIS            &none         &none       &none   &none    &none   &none   &bootloader
-  &none   &none   &none              &mt2 LEFT_BRACE LEFT_BRACKET   &mt2 RIGHT_BRACE RIGHT_BRACKET   &none         &none       &none   &none    &none   &none   &none
-  &none   &none   &none              &mt2 PIPE BACKSLASH            &mt2 QUESTION SLASH              &none         &none       &none   &none    &none   &none   &none
-                                     &kp LGUI                       &none                            &kp RET       &kp SPACE   &none   &trans
+//    ┌─────┬─────┬─────────┬─────────┬─────────┬─────┐   ┌─────┬────────┬────────┬────────┬─────┬──────┐
+//    │     │     │ mt2 ~ ` │    (    │    )    │     │   │     │        │        │        │     │ boot │
+//    ├─────┼─────┼─────────┼─────────┼─────────┼─────┤   ├─────┼────────┼────────┼────────┼─────┼──────┤
+//    │     │     │         │ mt2 { [ │ mt2 } ] │     │   │     │ &ok_h1 │ &ok_h2 │ &ok_h3 │     │      │
+//    ├─────┼─────┼─────────┼─────────┼─────────┼─────┤   ├─────┼────────┼────────┼────────┼─────┼──────┤
+//    │     │     │         │ mt2 | \ │ mt2 ? / │     │   │     │        │        │        │     │      │
+//    └─────┴─────┴─────────┼─────────┼─────────┼─────┤   ├─────┼────────┼────────┼────────┴─────┴──────┘
+//                          │  lgui   │         │ ent │   │ spc │        │        │
+//                          └─────────┴─────────┴─────┘   └─────┴────────┴────────┘
+  &none   &none   &mt2 TILDE GRAVE   &kp LEFT_PARENTHESIS           &kp RIGHT_PARENTHESIS            &none         &none       &none    &none    &none    &none   &bootloader
+  &none   &none   &none              &mt2 LEFT_BRACE LEFT_BRACKET   &mt2 RIGHT_BRACE RIGHT_BRACKET   &none         &none       &ok_h1   &ok_h2   &ok_h3   &none   &none
+  &none   &none   &none              &mt2 PIPE BACKSLASH            &mt2 QUESTION SLASH              &none         &none       &none    &none    &none    &none   &none
+                                     &kp LGUI                       &none                            &kp RET       &kp SPACE   &none    &trans
             >;
         };
 
