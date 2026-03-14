@@ -36,9 +36,6 @@ draw_config:
   glyph_hold_size: 12
   glyph_shifted_size: 10
   glyphs: {}
-binding_map:
-  "bt_win": "BT_WIN"
-  "bt_lin": "BT_LIN"
 parse_config:
   preprocess: true
   skip_binding_parsing: false
