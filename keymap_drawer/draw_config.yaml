@@ -62,8 +62,8 @@ parse_config:
     "&td_semi_col": "; :"
     "&ok_sound": OK Sound
     "&ok_trumpet": Ear Trumpet
-    "&bit_win": "BT Win"
-    "&bit_lin": "BT Linux"
+    "&bt_win": "BT Win"
+    "&bt_lin": "BT Linux"
 
   sticky_label: sticky
   toggle_label: toggle
