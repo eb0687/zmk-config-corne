@@ -18,6 +18,6 @@ manifest:
       revision: v0.3 # set to same version as zmk above
     - name: oskey
       remote: mentaldesk
-      revision: main
+      revision: v0.3.0
   self:
     path: config
