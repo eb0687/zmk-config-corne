@@ -25,6 +25,8 @@ have seen online. Some of the features include:
 - Layers
 - Urob's [auto-layer](https://github.com/urob/zmk-auto-layer) module (currently
   testing num_word)
+- [OsKey](https://github.com/mentaldesk/oskey?tab=readme-ov-file)
+- [KeyPeek](https://github.com/srwi/keypeek)
 
 I also added a couple of custom key that I use often on for specific apps on
 window based systems:
