@@ -133,18 +133,16 @@
             bindings = <&kp LA(NUMBER_3)>, <&none>, <&kp LA(NUMBER_3)>;
         };
 
-        // Window only binds for window hopper from powertoys
         ok_whf: ok_whf {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE)>, <&none>, <&none>;
+            bindings = <&whf>, <&none>, <&none>;
         };
 
-        // Window only binds for window hopper from powertoys
         ok_whb: ok_whb {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(GRAVE))>, <&none>, <&none>;
+            bindings = <&whb>, <&none>, <&none>;
         };
     };
 
@@ -177,6 +175,36 @@
                 <&kp LEFT_SHIFT>;
 
             label = "BROWSERTABB";
+        };
+
+        whf: whf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LALT>;
+            label = "WINDOWHOPF";
+        };
+
+        whb: whb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LALT>,
+                <&macro_release>,
+                <&kp LSHIFT>;
+            label = "WINDOWHOPB";
         };
 
         bt_win: bt_win {
