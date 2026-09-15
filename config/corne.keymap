@@ -138,14 +138,14 @@
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
             bindings = <&kp LA(GRAVE)>, <&none>, <&none>;
-        }
+        };
 
         // Window only binds for window hopper from powertoys
         ok_whb: ok_whb {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
             bindings = <&kp LA(LS(GRAVE))>, <&none>, <&none>;
-        }
+        };
     };
 
     macros {
