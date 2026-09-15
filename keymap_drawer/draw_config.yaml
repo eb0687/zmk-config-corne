@@ -284,6 +284,8 @@ parse_config:
     # Windows Only
     LC(LA(F11)): Sound Switch
     LC(F12): Ear Trumpet
+    LA(GRAVE): Window Forward
+    LA(LS(GRAVE)): Window Backward
 
   zmk_combos: {}
   zmk_preamble: "#define KEYMAP_DRAWER"
