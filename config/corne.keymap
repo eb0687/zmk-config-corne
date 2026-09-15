@@ -137,7 +137,7 @@
         ok_whf: ok_whf {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE), <&none>, <&none>;
+            bindings = <&kp LA(GRAVE)>, <&none>, <&none>;
         }
 
         // Window only binds for window hopper from powertoys
