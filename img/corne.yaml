@@ -362,8 +362,8 @@ layers:
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
   - $$mdi:arrow-right$$
-  - ''
-  - ''
+  - '&mkp MB4'
+  - '&mkp MB5'
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - Middle Click
