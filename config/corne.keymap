@@ -9,6 +9,20 @@
 #include <dt-bindings/zmk/oskey.h>
 #include <behaviors/oskey.dtsi>
 
+// Extend the ZMK existing mouse move behaviour
+&mmv {
+    acceleration-exponent = <1>; // 1
+    time-to-max-speed-ms = <500>; // 300
+    trigger-period-ms = <8>;
+};
+
+// Extend the ZMK existing mouse scroll behaviour
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;      // 300
+    trigger-period-ms = <8>;
+};
+
 #define DEF 0
 #define NAV 1
 #define SYM 2
